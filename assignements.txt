@@ -1,0 +1,15 @@
+
+
+**Esercitazione:**
+
+Realizzare (col linguaggio di programmazione che pare a voi)
+un’applicazione che ci permetta di selezionare il presentatore
+casuale delle sessioni collettive.
+
+Requisiti:
+
+* Dev’essere usabile al momento della presentazione. Max 5 secondi.
+* Deve permettere di escludere eventuali assenti.
+* (Se non lo avete già) create un accout su [github](https://github.com/) o su [gitlab](https://gitlab.com/users/sign_in) dove versionare il codice.
+
+
