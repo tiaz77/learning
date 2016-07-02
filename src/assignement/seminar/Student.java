@@ -1,4 +1,4 @@
-package assignement.seminar.first;
+package assignement.seminar;
 
 public class Student {
 

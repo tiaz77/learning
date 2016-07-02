@@ -1,4 +1,4 @@
-package assignement.seminar.first;
+package assignement.seminar;
 
 import java.util.ArrayList;
 import java.util.List;
