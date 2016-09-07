@@ -7,7 +7,22 @@ public class Seminar {
 
 	private Course _course;
 	private String _location;
-	private List<Enrollment> _enrollments;
+	private List<Enrollment> _enrollments = new ArrayList<Enrollment>();
+	private int _seats;
+	
+	public Seminar() {
+		_course = new Course("Math", 2, "Math Level 1");
+		_location = "Mendrisio";
+		_seats = 20;
+		addEnrollment((new Enrollment(new Student("Mattia", "Cattaneo"), "12.02.2015")));
+		addEnrollment((new Enrollment(new Student("Enrico", "Mazzi"), "14.02.2015")));
+	}
+	
+	private void addEnrollment(Enrollment enrollment) {
+		if (getSeatsLeft() > 0) {
+			_enrollments.add(enrollment);
+		}
+	}
 
 	public String getName() {
 		return _course.getName() + " " + _course.getNumber();
@@ -22,8 +37,7 @@ public class Seminar {
 	}
 
 	public int getSeatsLeft() {
-		//seats - number of student?
-		return 2;
+		return _seats - _enrollments.size();
 	}
 
 	public List<List<String>> getStudentList() {
