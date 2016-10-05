@@ -2,29 +2,25 @@ package assignement.presenter;
 
 import static org.junit.Assert.*;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
-public class PresenterTest extends Starter {
+public class PresenterTest {
 
 	@Test
-	public void singleCandidates() {
-		String result = new Chooser("Mattia").choose();
-		assertEquals("Mattia", result);
+	public void testMattiaIsReady() {
+		List<Student> students = new ArrayList<Student>();
+		students.add(new Student("Mattia", true));
+		assertEquals("Mattia", new Presenter(students).choose());
 	}
-	
+
 	@Test
-	public void multipleCandidates() {
-		String[] candidates = {"Dario", "Mattia"};
-		String result = new Chooser(candidates).choose();
-		assertTrue(Arrays.asList(candidates).contains(result));
-	}	
-	
-	@Test
-	public void noCandidates() {
-		String result = new Chooser().choose();
-		assertEquals(null, result);
-	}	
+	public void testNobodyIsReady() {
+		List<Student> students = new ArrayList<Student>();
+		students.add(new Student("Mattia", false));
+		assertEquals(null, new Presenter(students).choose());
+	}
 
 }

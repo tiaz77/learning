@@ -1,6 +1,5 @@
 package assignement.presenter;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -9,8 +8,8 @@ public class Chooser {
 	private List<String> _candidates;
 	private Random _strategy;
 
-	public Chooser(String...candidates) {
-		_candidates = Arrays.asList(candidates);
+	public Chooser(List<String> candidates) {
+		_candidates = candidates;
 		_strategy = new Random();
 	}
 
