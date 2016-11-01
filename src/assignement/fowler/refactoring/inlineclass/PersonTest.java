@@ -8,8 +8,10 @@ public class PersonTest {
 
 	@Test
 	public void test() {
-		Person person = new Person("Mattia", "091", "5589269");
-		assertEquals("(091) 5589269", person.getOfficeTelephone().getTelephoneNumber());
+		Person person = new Person("Mattia");
+		person.getOfficeTelephone().setAreaCode("091");
+		person.getOfficeTelephone().setNumber("5589269");
+		assertEquals("(091) 5589269", person.getTelephoneNumber());
 	}
 	
 	
