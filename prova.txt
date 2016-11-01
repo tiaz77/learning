@@ -1,0 +1,13 @@
+@startuml1
+
+actor customer
+
+customer->cas:buy
+
+
+@enduml1
+
+
+@startuml2
+
+@enduml2
