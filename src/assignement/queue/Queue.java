@@ -1,5 +1,6 @@
 package assignement.queue;
 
+
 public interface Queue {
 
 	boolean isEmpty();
