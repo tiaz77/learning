@@ -2,9 +2,10 @@ package assignement.fowler.refactoring.movemethod;
 
 public class Standard implements AccountType {
 
+
 	@Override
-	public boolean isPremium() {
-		return false;
+	public double overDraftCharge(int daysOverdrawn) {
+		return daysOverdrawn * 1.75;
 	}
 
 }

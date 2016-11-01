@@ -2,6 +2,6 @@ package assignement.fowler.refactoring.movemethod;
 
 public interface AccountType {
 
-	boolean isPremium();
+	double overDraftCharge(int daysOverdrawn);
 
 }
