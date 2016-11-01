@@ -1,8 +1,20 @@
 package assignement.fowler.refactoring.inlineclass;
 
 public class Person {
+	private String _areaCode;
+	private String _number;
+	private String _name;
+	
 	public Person(String name) {
 		_name = name;
+	}
+	
+	void setAreaCode(String areaCode) {
+		_areaCode = areaCode;
+	}
+	
+	void setNumber(String number) {
+		_number = number;
 	}
 
 	public String getName() {
@@ -10,14 +22,7 @@ public class Person {
 	}
 
 	public String getTelephoneNumber() {
-		return _officeTelephone.getTelephoneNumber();
+		return ("(" + _areaCode + ") " + _number);
 	}
-
-	TelephoneNumber getOfficeTelephone() {
-		return _officeTelephone;
-	}
-
-	private String _name;
-	private TelephoneNumber _officeTelephone = new TelephoneNumber();
 
 }
