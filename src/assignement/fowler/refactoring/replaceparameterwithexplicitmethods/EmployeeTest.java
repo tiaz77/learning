@@ -8,17 +8,17 @@ public class EmployeeTest {
 
 	@Test
 	public void testEngineer() {
-		assertEquals(Engineer.class.getName(),  Employee.create(Employee.ENGINEER).getClass().getName());
+		assertEquals(Engineer.class.getName(),  Employee.createEngineer().getClass().getName());
 	}
 
 	@Test
 	public void testManager() {
-		assertEquals(Manager.class.getName(),  Employee.create(Employee.MANAGER).getClass().getName());
+		assertEquals(Manager.class.getName(),  Employee.createManager().getClass().getName());
 	}
 
 	@Test
 	public void testSalesman() {
-		assertEquals(Salesman.class.getName(),  Employee.create(Employee.SALESMAN).getClass().getName());
+		assertEquals(Salesman.class.getName(),  Employee.createSalesman().getClass().getName());
 	}
 
 }
