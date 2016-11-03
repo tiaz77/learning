@@ -1,6 +1,7 @@
 package assignement.fowler.refactoring.replaceconditionalwithpolymorphin;
 
 public abstract class EmployeeType {
-	abstract int getTypeCode();
+
+	abstract int payAmount(Employee employee);
 
 }

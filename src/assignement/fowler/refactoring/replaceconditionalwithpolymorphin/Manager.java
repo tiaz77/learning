@@ -3,8 +3,8 @@ package assignement.fowler.refactoring.replaceconditionalwithpolymorphin;
 public class Manager extends EmployeeType {
 
 	@Override
-	int getTypeCode() {
-		return Employee.MANAGER;
+	int payAmount(Employee employee) {
+		return employee.getMonthlySalary() + employee.getBonus();
 	}
 
 }
