@@ -11,32 +11,15 @@ public class CustomerInformation {
 	}
 
 	public BillingPlan getBillingPlan() {
-		BillingPlan plan;
-		if (_customer == null)
-			plan = BillingPlan.basic();
-		else
-			plan = _customer.getPlan();
-		return plan;
+		return _customer.getPlan();
 	}
 
 	public String getCustomerName() {
-		String customerName;
-		if (_customer == null)
-			customerName = "occupant";
-		else
-			customerName = _customer.getName();
-		return customerName;
+		return _customer.getName();
 	}
 
 	public int getWeeksDelinquent() {
-
-		int weeksDelinquent;
-		if (_customer == null)
-			weeksDelinquent = 0;
-		else
-			weeksDelinquent = _customer.getHistory().getWeeksDelinquentInLastYear();
-
-		return weeksDelinquent;
+		return _customer.getHistory().getWeeksDelinquentInLastYear();
 	}
 
 }

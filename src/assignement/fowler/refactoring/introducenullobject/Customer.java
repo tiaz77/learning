@@ -23,4 +23,8 @@ public class Customer {
 		return _billingPlan;
 	}
 
+	public boolean isNull() {
+		return false;
+	}
+
 }
