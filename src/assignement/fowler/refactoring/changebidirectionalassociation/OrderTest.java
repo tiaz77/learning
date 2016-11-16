@@ -10,7 +10,9 @@ public class OrderTest {
 	public void test() {
 		Order order = new Order();
 		order.setPrice(11);
-		order.setCustomer(new Customer());
+		Customer customer = new Customer();
+		order.setCustomer(customer);
+		customer.addOrder(order);
 		
 		assertEquals("8.8", String.valueOf(order.getDiscountedPrice()));
 	}
