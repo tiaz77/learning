@@ -14,7 +14,7 @@ public class PersonTest {
 		Person john = new Person();
 		john.setDepartment(department);
 		
-		assertEquals(manager,john.getDepartment().getManager());
+		assertEquals(manager,john.getManager());
 	}
 
 }
