@@ -9,7 +9,6 @@ public class EmployeeTest {
 	@Test
 	public void test() throws Exception {
 		new Employee().getExpenseLimit();
-		
 	}
 
 }
