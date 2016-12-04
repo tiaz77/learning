@@ -13,26 +13,23 @@ public class CourseTest {
 	@Test
 	public void test() throws Exception {
 		Person kent = new Person();
-		Set s = new HashSet();
-		s.add(new Course("Smalltalk Programming", false));
-		s.add(new Course("Appreciating Single Malts", true));
-		kent.setCourses(s);
+		kent.add(new Course("Smalltalk Programming", false));
+		kent.add(new Course("Appreciating Single Malts", true));
+		
 		assertEquals(2, kent.getCourses().size());
 		Course refact = new Course("Refactoring", true);
-		kent.getCourses().add(refact);
-		kent.getCourses().add(new Course("Brutal Sarcasm", false));
+		kent.add(refact);
+		kent.add(new Course("Brutal Sarcasm", false));
 		assertEquals(4, kent.getCourses().size());
-		kent.getCourses().remove(refact);
+		kent.remove(refact);
 		assertEquals(3, kent.getCourses().size());
 	}
 
 	@Test
 	public void testAdvanceCourses() {
 		Person kent = new Person();
-		Set s = new HashSet();
-		s.add(new Course("Smalltalk Programming", false));
-		s.add(new Course("Appreciating Single Malts", true));
-		kent.setCourses(s);
+		kent.add(new Course("Smalltalk Programming", false));
+		kent.add(new Course("Appreciating Single Malts", true));
 		Iterator iter = kent.getCourses().iterator();
 		int count = 0;
 		while (iter.hasNext()) {
